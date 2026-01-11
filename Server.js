@@ -82,6 +82,9 @@ app.post('/score', (req, res) => {
     res.status(401).json({ error: "Invalid token" });
   }
 });
+app.get('/', (req, res) => {
+  res.send('Snake Caves API is live! Try /register or /login');
+});
 
 // --- Start server ---
 app.listen(3000, () => console.log("Snake Caves server running on http://localhost:3000"));
